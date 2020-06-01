@@ -1,8 +1,200 @@
+.TopSection
+{
+    height: 70vh;
+    width: 100%;
+    background-image: var(--linear-top-background);
+    padding-top: 10vh;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+
+    .Congrats
+    {
+        opacity: 0.5;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .Name
+    {
+        opacity: 1;
+        font-size: 5em;
+        font-weight: bold;
+    }
+}
+
 .Wave
 {
-    fill: black;
-    svg path
+    width: 110%;
+    overflow: hidden;
+    margin-top: -15%;
+    margin-left: -1%;
+
+    .WavePath
     {
-        fill: black;
+        fill: var(--background);
     }
+}
+svg:not(:root)
+{
+    width: 100%;
+    height: auto;
+}
+
+.Info, .Projects, .Contact
+{
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--background);
+    padding: 0 20px 0 20px;
+    margin-bottom: 50px;
+
+    h1
+    {
+        font-size: 3em;
+        margin-left: 5px;
+        margin-bottom: 0;
+        font-weight: bold;
+        color: #36A885;
+    }
+
+    hr
+    {
+        background: #36A885;
+        width: 96px;
+    }
+
+    p
+    {
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    .Link
+    {
+        text-decoration: none;
+    }
+}
+
+.Projects
+{
+    margin-top: 140px;
+
+    h1
+    {
+        color: #3DBFCB;
+    }
+
+    hr
+    {
+        width: 200px;
+        background: #3DBFCB;
+    }
+
+    .ProjectBox
+    {
+        margin: 0;
+        margin-top: 20px;
+
+        ion-card-title
+        {
+            font-size: 2em;
+        }
+
+        ion-card-subtitle
+        {
+            font-size: 1.4em;
+            margin-top: 5px;
+        }
+
+        p
+        {
+            font-size: 1.6em;
+        }
+
+        a
+        {
+            display: inline-block;
+            font-size: 1.7em;
+            margin-top: 10px;
+        }
+    }
+
+    .ShowAll
+    {
+        text-align: center;
+        font-size: 1.6em;
+    }
+}
+
+.Contact
+{
+    margin-top: 140px;
+
+    h1
+    {
+        color: #F0932A;
+        text-align: center;
+    }
+
+    .Icons
+    {
+        margin: 0 auto;
+        cursor: pointer;
+        width: fit-content;
+
+        ion-icon
+        {
+            margin: 20px;
+            font-size: 4em;
+        }
+    }
+}
+
+.ProjectBox:first-of-type
+{
+    margin-top: 0;
+}
+
+.Underline
+{
+    background: white;
+    height: 8px;
+    width: 150px;
+    float: left;
+    border-radius: 30px;
+    margin-top: 0;
+}
+
+.Link
+{
+    position: relative;
+    display: inline-block;
+}
+
+.Link:hover:before
+{
+    transform: scaleX(1);
+}
+
+.Link:before
+{
+    content: " ";
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    transform: scaleX(0);
+    transition: 0.2s transform ease-in-out;
+    transform-origin: left;
+    background: var(--ion-color-primary, #3880ff);
+}
+
+.Footer
+{
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.8em;
+    padding-bottom: max(10px, var(--ion-safe-area-bottom));
 }

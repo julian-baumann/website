@@ -1,5 +1,5 @@
 # Website
 
-## New Website. Not published yet.
+## New website, build with ionic
 
 http://julian-baumann.com
