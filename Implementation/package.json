@@ -1,8 +1,8 @@
 {
-  "name": "Website",
+  "name": "website",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Julian Baumann",
+  "homepage": "http://julian-baumann.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -46,7 +46,8 @@ svg:not(:root)
     max-width: 1000px;
     margin: 0 auto;
     background: var(--background);
-    padding: 0 20px 0 20px;
+    padding-left: calc(20px + var(--ion-safe-area-left));
+    padding-right: calc(20px + var(--ion-safe-area-right));
     margin-bottom: 50px;
 
     h1

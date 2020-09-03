@@ -5,10 +5,6 @@ const routes: Routes = [
     {
         path: "",
         loadChildren: (): Promise<any> => import("./pages/home/home.module").then((m: typeof import("./pages/home/home.module")) => m.HomePageModule)
-    },
-    {
-        path: "**",
-        redirectTo: ""
     }
 ];
 
