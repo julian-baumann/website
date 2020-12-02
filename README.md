@@ -1,5 +1,3 @@
-# Website
+# My personal website
 
-## New website, build with ionic
-
-http://julian-baumann.com
+https://julian-baumann.com
