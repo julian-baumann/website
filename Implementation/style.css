@@ -52,6 +52,19 @@ body
 {
     color: rgb(214, 214, 214);
     text-decoration: none;
+    cursor: pointer;
+}
+
+.SmallHeader
+{
+    font-size: 5px;
+}
+
+.DazzleMe
+{
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 30px;
 }
 
 .Footer
