@@ -60,6 +60,7 @@ body
 .SmallHeader
 {
     font-size: 5px;
+    cursor: pointer;
 }
 
 .DazzleMe
