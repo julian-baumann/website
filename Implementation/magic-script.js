@@ -1,37 +1,41 @@
 function Home()
 {
-    window.open("https://julian-baumann.com", "_self");
+    window.open("/", "_self");
 }
 
-const ids = [
-    "j6vypLEjLh8",
-    "IdoD2147Fik",
-    "dWnVUIeMcoI",
-    "f0oM5xivl6Y",
-    "S_A2yvxNY_M",
-    "VIICn7U7VVk",
-    "DRZ3F5VqseU",
-    "T28LyXf8MlU",
-    "H1fnLcva28g",
-    "LZgeIReY04c",
-    "iH1pVJiHiu0",
-    "0TNSfe4OWzk",
-    "hs5oLYiB2Cg",
-    "pFjlW_OkMl8",
-    "YSKF1Ka-qIc"
-]
+let playlistLength = 5;
+let magicConfiguration;
+let index = 0;
 
-const random = ids[Math.floor(Math.random() * ids.length)];
+function GetJsonData()
+{
+    return new Promise((resolve) =>
+    {
+        fetch("magic-configuration.json").then((response) =>
+        {
+            response.json().then((result) =>
+            {
+                magicConfiguration = result;
+                index = Math.floor(Math.random() * magicConfiguration.length);
+                resolve();
+            })
+        })
+    })
+}
 
 function DazzleMe()
 {
     const videoFrame = document.getElementById("VideoFrame");
-    videoFrame.src = `https://www.youtube.com/embed/${random}?autoplay=1`;
+
+    videoFrame.src = `https://www.youtube.com/embed/?list=${magicConfiguration.playlistId}&index=${index}&autoplay=1`;
 }
 
 function OpenVideo()
 {
-    window.open(`https://www.youtube.com/watch?v=${random}`, "_self");
+    if (magicConfiguration)
+    {
+        window.open(`https://www.youtube.com/playlist?list=${magicConfiguration.playlistId}`, "_self");
+    }
 }
 
-DazzleMe();
+GetJsonData().then(DazzleMe);
