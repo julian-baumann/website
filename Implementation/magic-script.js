@@ -1,11 +1,11 @@
+let playlistLength = 5;
+let magicConfiguration;
+let index = 0;
+
 function Home()
 {
     window.open("/", "_self");
 }
-
-let playlistLength = 5;
-let magicConfiguration;
-let index = 0;
 
 function GetJsonData()
 {
