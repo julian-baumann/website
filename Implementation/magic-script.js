@@ -1,4 +1,3 @@
-let playlistLength = 5;
 let magicConfiguration;
 let index = 0;
 
