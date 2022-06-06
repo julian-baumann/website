@@ -1,3 +1,3 @@
-# My personal website
+# My website
 
 https://julian-baumann.com
